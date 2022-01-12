@@ -10,17 +10,7 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  // clickedOption = idx => {
-  //   this.setState({ clickedOptionIdx: idx });
-  // };
-  // adddValue = (index) => {
-  //   this.setState(prevState => {
-  //     const clickedOptionIdx = index;
-  //     return {
-  //       clickedOptionIdx: prevState.clickedOptionIdx + 1,
-  //     };
-  //   });
-  // };
+
   addGoodValue = () => {
     this.setState(prevState => {
       return { good: prevState.good + 1 };
@@ -64,9 +54,8 @@ export class App extends Component {
               good={good}
               neutral={neutral}
               bad={bad}
-              total={total}
               totalPercent={totalPercent}
-              totalFeedback={this.countTotalFeedback()}
+              totalFeedback={total}
             />
           ) : (
             <Notification message="There is no feedback" />
